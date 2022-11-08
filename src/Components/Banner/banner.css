@@ -1,0 +1,23 @@
+.banner {
+  width: 85%;
+  height: 24rem;
+  margin: 1.5rem auto 1rem auto;
+  background-image: url("https://images.unsplash.com/photo-1577638104555-83af2d50b5e7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=927&q=80");
+  background-size: cover;
+  background-position: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.6rem;
+  -webkit-border-radius: 0.6rem;
+  -moz-border-radius: 0.6rem;
+  -ms-border-radius: 0.6rem;
+  -o-border-radius: 0.6rem;
+}
+
+p {
+  color: white;
+  font-size: 4rem;
+  font-weight: 600;
+  text-shadow: 2px 2px 8px black;
+}
