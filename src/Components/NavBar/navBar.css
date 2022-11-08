@@ -1,0 +1,29 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  background-color: rgb(185, 199, 243);
+  padding: 0 0.625rem;
+  height: 6vh;
+  outline: 3px solid royalblue;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.navbar__title {
+  text-shadow: 6px 4px 4px rgba(25, 167, 244, 0.78);
+  font-weight: 700;
+  color: black;
+}
+
+.navbar__ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.625rem;
+  margin: 0;
+  padding: 0;
+}
