@@ -8,8 +8,10 @@ const ItemCard = () => {
         alt="Item"
         className="item-card__img"
       />
-      <p>Name of the item</p>
-      <p>Desc of the item</p>
+      <p className="item-card__name">Santa Claus</p>
+      <p className="item-card__description">
+        You want this Santa at home instead of a "chorizo"
+      </p>
     </div>
   );
 };
