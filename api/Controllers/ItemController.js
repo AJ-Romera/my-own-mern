@@ -9,6 +9,15 @@ const getItems = async (req, res) => {
   res.status(200).json(items);
 };
 
+// @desc  Get item
+// @route  GET /api/item/:id
+// @access  Private
+const getItem = async (req, res) => {
+  const item = await ItemModel.findById(req.params.id);
+
+  res.status(200).json(item);
+};
+
 // @desc  Add item
 // @route  POST /api/add-item
 // @access  Private
@@ -52,4 +61,5 @@ module.exports = {
   getItems,
   addItem,
   deleteItem,
+  getItem,
 };

@@ -4,9 +4,11 @@ const {
   getItems,
   addItem,
   deleteItem,
+  getItem,
 } = require("../Controllers/ItemController");
 
 router.get("/items", getItems);
+router.get("/item/:id", getItem);
 router.post("/item", addItem);
 router.delete("/item/:id", deleteItem);
 
