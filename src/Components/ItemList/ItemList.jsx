@@ -24,7 +24,7 @@ const ItemList = () => {
   return (
     <div className="item-list">
       {items.map((item) => (
-        <ItemCard key={item._id} item />
+        <ItemCard key={item._id} item={item} />
       ))}
       {/* <ItemCard />
       <ItemCard />
