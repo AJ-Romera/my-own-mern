@@ -18,11 +18,13 @@
   width: 100%;
   height: 20vh;
   object-fit: cover;
+  cursor: pointer;
 }
 .item-card__name {
   margin: 0;
   padding: 0.25rem 0 0 0.625rem;
   font-weight: 700;
+  cursor: pointer;
 }
 .item-card__description {
   margin: 0;
