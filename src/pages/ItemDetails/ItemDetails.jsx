@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import ItemInfo from "../../Components/ItemInfo/ItemInfo";
 import "./itemDetails.css";
 
 const API_BASE_URL = "http://localhost:5000/api/";
@@ -25,11 +26,7 @@ const ItemDetails = () => {
 
   return (
     <div>
-      {/* This vvvv should be a component, but this is a quick practice */}
-      <div>{item.name}</div>
-      <div>{item.description}</div>
-      <div>{item.price}</div>
-      <img src={item.imageUrl} alt="item" />
+      <ItemInfo item={item} />
     </div>
   );
 };
