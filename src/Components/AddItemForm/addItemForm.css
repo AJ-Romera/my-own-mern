@@ -7,20 +7,6 @@
   background-color: aliceblue;
 }
 
-/* .item-info__container {
-  width: 85%;
-  margin: 1.5rem auto 1rem auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 0.6rem;
-  -webkit-border-radius: 0.6rem;
-  -moz-border-radius: 0.6rem;
-  -ms-border-radius: 0.6rem;
-  -o-border-radius: 0.6rem;
-  background-color: aliceblue;
-} */
-
 .add-item-form__form {
   display: flex;
   flex-direction: column;
