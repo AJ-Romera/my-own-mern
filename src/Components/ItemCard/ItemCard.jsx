@@ -1,7 +1,22 @@
 import { Link } from "react-router-dom";
 import "./itemCard.css";
 
-const ItemCard = ({ item }) => {
+const API_BASE_URL = "http://localhost:5000/api/";
+
+const ItemCard = ({ item, items, setItems }) => {
+  const deleteItem = async (id) => {
+    try {
+      const response = await fetch(`${API_BASE_URL}item/${id}`, {
+        method: "DELETE",
+      });
+      const data = await response.json();
+      setItems(items.filter((item) => item._id !== data._id));
+      alert(`${data.name} with id: ${data._id} was deleted`);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <div className="item-card">
       <Link to={`/item/${item._id}`}>
@@ -14,6 +29,12 @@ const ItemCard = ({ item }) => {
       <div className="item-card__buy-container">
         <span className="item-card__price">{item.price}€</span>
         <button className="item-card__buy-btn">Buy</button>
+        <button
+          className="item-card__delete-btn"
+          onClick={() => deleteItem(item._id)}
+        >
+          X
+        </button>
       </div>
     </div>
   );

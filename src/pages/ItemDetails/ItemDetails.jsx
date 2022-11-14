@@ -4,7 +4,6 @@ import ItemInfo from "../../Components/ItemInfo/ItemInfo";
 import "./itemDetails.css";
 
 const API_BASE_URL = "http://localhost:5000/api/";
-// 636be4b2eb30b519d30a95e8
 
 const ItemDetails = () => {
   const [item, setItem] = useState({});
