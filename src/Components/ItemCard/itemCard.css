@@ -97,7 +97,7 @@
   cursor: pointer;
   font-weight: 600;
   line-height: 20px;
-  padding: 0.375rem 1rem;
+  padding: 0.1rem 0.25rem;
   text-align: center;
   user-select: none;
   -webkit-user-select: none;
@@ -129,4 +129,47 @@
 .item-card__delete-btn:active {
   background-color: #8e4229;
   box-shadow: rgba(20, 70, 32, 0.2) 0 1px 0 inset;
+}
+/* Edit Button */
+
+.item-card__edit-btn {
+  background-color: #3d66ef;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  box-shadow: rgba(27, 31, 35, 0.1) 0 1px 0;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 0.375rem 1rem;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  border-radius: 0.375rem;
+  -webkit-border-radius: 0.375rem;
+  -moz-border-radius: 0.375rem;
+  -ms-border-radius: 0.375rem;
+  -o-border-radius: 0.375rem;
+  margin-left: 0.312rem;
+}
+.item-card__edit-btn:focus:not(:focus-visible):not(.focus-visible) {
+  box-shadow: none;
+  outline: none;
+}
+.item-card__edit-btn:hover {
+  background-color: #2049d0;
+}
+.item-card__edit-btn:focus {
+  box-shadow: rgba(46, 97, 164, 0.4) 0 0 0 3px;
+  outline: none;
+}
+.item-card__edit-btn:disabled {
+  background-color: #94b5d3;
+  border-color: rgba(27, 31, 35, 0.1);
+  color: rgba(255, 255, 255, 0.8);
+  cursor: default;
+}
+.item-card__edit-btn:active {
+  background-color: #29518e;
+  box-shadow: rgba(20, 41, 70, 0.2) 0 1px 0 inset;
 }
