@@ -4,7 +4,7 @@ import "./addItem.css";
 const AddItem = () => {
   return (
     <div>
-      <p>Create a New Item to Sell</p>
+      <p className="add-item__title">Create a New Item to Sell</p>
       <AddItemForm />
     </div>
   );
