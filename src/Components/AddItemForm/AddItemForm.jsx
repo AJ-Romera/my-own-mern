@@ -93,13 +93,25 @@ const AddItemForm = () => {
         </button>
       </div>
 
-      <div className="add-item-form__preview">
-        <span>Preview</span>
-        <img src={imageUrl} alt="" />
-        <p>{name}</p>
-        <p>{description}</p>
-        <p>{price}</p>
-      </div>
+      {name && (
+        <div className="add-item-form__preview">
+          <span className="add-item-form__title">Preview:</span>
+
+          <div className="item-card">
+            {imageUrl && (
+              <img src={imageUrl} alt="Item" className="item-card__img" />
+            )}
+            <p className="item-card__name">{name}</p>
+            {description && (
+              <p className="item-card__description">{description}</p>
+            )}
+            <div className="item-card__buy-container">
+              {price && <span className="item-card__price">{price}€</span>}
+              <button className="item-card__buy-btn">Buy</button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
