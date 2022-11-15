@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./itemCard.css";
 
-const API_BASE_URL = "http://localhost:5000/api/";
+const API_BASE_URL = "https://item-mern.onrender.com/api/";
 
 const ItemCard = ({ item, items, setItems }) => {
   const deleteItem = async (id) => {
