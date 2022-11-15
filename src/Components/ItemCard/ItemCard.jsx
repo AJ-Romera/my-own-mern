@@ -29,7 +29,9 @@ const ItemCard = ({ item, items, setItems }) => {
       <div className="item-card__buy-container">
         <span className="item-card__price">{item.price}€</span>
         <button className="item-card__buy-btn">Buy</button>
-        <button className="item-card__edit-btn">Edit</button>
+        <Link to={`/edit-item/${item._id}`}>
+          <button className="item-card__edit-btn">Edit</button>
+        </Link>
         <button
           className="item-card__delete-btn"
           onClick={() => deleteItem(item._id)}

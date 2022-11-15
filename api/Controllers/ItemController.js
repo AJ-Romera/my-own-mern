@@ -42,6 +42,31 @@ const addItem = async (req, res) => {
   res.status(200).json(item);
 };
 
+// @desc  Update item
+// @route  PUT /api/item/:id
+// @access  Private
+const updateItem = async (req, res) => {
+  const itemId = req.params.id;
+  const updates = req.body;
+  const options = { new: true };
+  let item;
+
+  try {
+    item = await ItemModel.findByIdAndUpdate(itemId, updates, options);
+  } catch (error) {
+    console.error(error);
+  }
+
+  if (!item) {
+    console.log(item);
+    return res
+      .status(500)
+      .json({ message: "Unable to update, maybe you gave the wrong id" });
+  }
+
+  return res.status(200).json({ item });
+};
+
 // @desc  Delete item
 // @route  DELETE /item/:id
 // @access  Private
@@ -60,6 +85,7 @@ const deleteItem = async (req, res) => {
 module.exports = {
   getItems,
   addItem,
+  updateItem,
   deleteItem,
   getItem,
 };
