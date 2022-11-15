@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import "./updateItem.css";
 
-const API_BASE_URL = "https://item-mern.onrender.com/api/";
+const API_BASE_URL = "https://item-mern-api.onrender.com/api/";
 
 const UpdateItem = () => {
   const [item, setItem] = useState("");

@@ -8,7 +8,7 @@ const AddItemForm = () => {
   const [imageUrl, setImageUrl] = useState("");
 
   const addItem = async () => {
-    let result = await fetch("https://item-mern.onrender.com/api/item", {
+    let result = await fetch("https://item-mern-api.onrender.com/api/item", {
       method: "POST",
       body: JSON.stringify({
         name,

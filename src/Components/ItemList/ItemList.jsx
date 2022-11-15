@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import ItemCard from "../ItemCard/ItemCard";
 import "./itemList.css";
 
-const API_BASE_URL = "https://item-mern.onrender.com/api/";
+const API_BASE_URL = "https://item-mern-api.onrender.com/api/";
 
 const ItemList = () => {
   const [items, setItems] = useState([]);
