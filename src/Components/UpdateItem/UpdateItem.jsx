@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import "./updateItem.css";
 
 const API_BASE_URL = "http://localhost:5000/api/";
 
@@ -29,6 +30,8 @@ const UpdateItem = () => {
     }
   };
 
+  const navigate = useNavigate();
+
   const editItem = async () => {
     let result = await fetch(`${API_BASE_URL}item/${itemId.id}`, {
       method: "PUT",
@@ -43,11 +46,13 @@ const UpdateItem = () => {
       },
     });
     await result.json();
+    alert("Your item has been updated succesfully!");
+    navigate("/");
   };
 
   return (
-    <div className="add-item-form__container">
-      <div className="add-item-form__form">
+    <div className="edit-item-form__container">
+      <div className="edit-item-form__form">
         <div className="form__group field">
           <input
             id="name"
@@ -105,13 +110,13 @@ const UpdateItem = () => {
           </label>
         </div>
 
-        <button onClick={editItem} className="add-item__button">
+        <button onClick={editItem} className="edit-item__button">
           Create Item
         </button>
       </div>
 
-      <div className="add-item-form__preview">
-        <span className="add-item-form__title">Preview:</span>
+      <div className="edit-item-form__preview">
+        <span className="edit-item-form__title">Preview:</span>
 
         <div className="item-card">
           {imageUrl && (
